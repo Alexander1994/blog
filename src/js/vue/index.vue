@@ -1,20 +1,32 @@
 <style lang="less">
-    @black: #000;
-    .black {
-        color: @black;
+    #app {
+        font-family: Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-align: center;
+        color: #2c3e50;
+        margin-top: 20px;
     }
 </style>
 
 <template>
-    <h1 class="black">{{msg}}</h1>
+    <div id="app">
+        <a href="/">
+            <h1>Home</h1>
+        </a>
+        <a v-once v-for="(blog, index) in blogs" :href="'/#/' + index">{{blog.title}}</a>
+        <router-view></router-view>
+    </div>
 </template>
 
 <script>
+    var blogData = require("../../media/blog.json");
     module.exports = {
-        data :() => {
+        name: 'app',
+        data: function () {
             return {
-                msg: 'My Blog is awesomerest!~~~~~~~~~~~~~~~~~`'
-            }
+                blogs: blogData.blog
+            };
         }
     };
 </script>
