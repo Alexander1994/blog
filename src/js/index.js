@@ -2,7 +2,7 @@ process.env.NODE_ENV = 'production';
 
 var Vue = require('vue');
 var App = require('./vue/index.vue');
-var Blog = require('./vue/blog.vue');
+var BlogStream = require('./vue/blogstream.vue');
 var Home = require('./vue/home.vue');
 var VueRouter = require('vue-router');
 
@@ -11,8 +11,8 @@ var VueRouter = require('vue-router');
 Vue.use(VueRouter);
 
 var routes = [
-    {path: '/', component: Home},
-    {path: '/:id', component: Blog, props:true}
+    {name: "home", path: '/', component: Home},
+    {name: "blog", path: '/blog/:id', component: BlogStream, props:true}
 ];
 
 var router = new VueRouter({

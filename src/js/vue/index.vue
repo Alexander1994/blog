@@ -11,10 +11,11 @@
 
 <template>
     <div id="app">
-        <a href="/">
+        <router-link to="/">
             <h1>Home</h1>
-        </a>
-        <a v-once v-for="(blog, index) in blogs" :href="'/#/' + index">{{blog.title}}</a>
+        </router-link>
+        <router-link v-once v-for="(blog, index) in blogs" :to="'/blog/' + index">{{blog.title}}</router-link>
+        <router-link to="/blog/all">All</router-link>
         <router-view></router-view>
     </div>
 </template>

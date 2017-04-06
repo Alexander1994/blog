@@ -7,10 +7,10 @@
 
 <template>
     <div>
-        <h1 class="black" v-once>{{blog.title}}</h1>
-        <p v-once>{{blog.date}}</p>
-        <p v-once>You are looking for blog {{ id }}</p>
-        <p v-once>{{blog.content}}</p>
+        <h1 class="black">{{blog.title}}</h1>
+        <p>{{blog.date}}</p>
+        <p v->{{blog.content}}</p>
+        <p>You are looking for blog {{ id }}</p>
     </div>
 </template>
 
@@ -18,10 +18,10 @@
     var blogData = require("../../media/blog.json");
 
     module.exports = {
-        props:['id'],
-        data :function () {
-            return {
-                blog: blogData.blog[this.id]
+        props:['blogId'],
+        computed: {
+            blog: function () {
+                return blogData.blog[this.blogId];
             }
         }
     };
