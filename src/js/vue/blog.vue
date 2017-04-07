@@ -9,7 +9,7 @@
     <div>
         <h1 class="black">{{blog.title}}</h1>
         <p>{{blog.date}}</p>
-        <p v->{{blog.content}}</p>
+        <p>{{blog.content}}</p>
         <p>You are looking for blog {{ id }}</p>
     </div>
 </template>
