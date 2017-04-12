@@ -24,10 +24,8 @@
         },
         computed: {
             getBlogIdList: function () {
-                console.log(parseInt(this.blogYear) !== NaN);
                 return parseInt(this.blogYear) > 2015 ? this.blogIdListForYear() : [...Array(blogData.blog.length).keys()];
             },
-
         },
         methods: {
             blogIdListForYear: function () {

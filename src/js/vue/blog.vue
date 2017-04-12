@@ -1,4 +1,4 @@
-<style lang="less">
+<style lang="less" scoped>
     @black: #000;
     .black {
         color: @black;
