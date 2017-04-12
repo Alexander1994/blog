@@ -1,28 +1,27 @@
 <style lang="less">
     #app {
-        font-family: Helvetica, Arial, sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        text-align: center;
-        color: #2c3e50;
-        margin-top: 20px;
+    }
+    h1 {
+        margin: 0;
+        font-size: 48px;
     }
 </style>
 
 <template>
     <div id="app">
-        <router-link to="/">
-            <h1>Home</h1>
-        </router-link>
-        <router-link to="/blog/all">
-            <h1>Blog</h1>
-        </router-link>
+        <header>
+            <router-link to="/">
+                <h1>Alex McCallum</h1>
+            </router-link>
+        </header>
         <router-view></router-view>
     </div>
 </template>
 
 <script>
     module.exports = {
-        name: 'app',
+        name: 'app'
     };
 </script>
