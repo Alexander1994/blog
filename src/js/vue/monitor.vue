@@ -8,23 +8,24 @@
         background: black;
         border: 5px grey solid;
         border-bottom: 40px grey solid;
+
+        &:after {
+            margin: 145px auto 0 auto;
+            content: "";
+            display: block;
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+            background: DimGrey;
+        }
+        & > div {
+            color:white;
+            position: absolute;
+            font-size: 25px;
+            left: 15px;
+        }
     }
-    #monitor:after {
-        margin: 0 auto;
-        margin-top: 145px;
-        content: "";
-        display: block;
-        border-radius: 50%;
-        width: 10px;
-        height: 10px;
-        background: DimGrey;
-    }
-    #monitor > div {
-        color:white;
-        position: absolute;
-        font-size: 25px;
-        left: 15px;
-    }
+
 </style>
 
 <template>
