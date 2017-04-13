@@ -1,17 +1,27 @@
 <style lang="less" scoped>
-    @black: #000;
-    .black {
-        color: @black;
+    h3 {
+        margin: 0;
+    }
+    p {
+        margin: 2em 0 0 0;
+    }
+    section {
+        margin-bottom: 4em;
+    }
+    hr {
+        border-width: 0.1rem;
     }
 </style>
 
 <template>
-    <div>
-        <h1 class="black">{{blog.title}}</h1>
-        <p>{{blog.date}}</p>
-        <p>{{blog.content}}</p>
-        <p>You are looking for blog {{ id }}</p>
-    </div>
+    <section class="row">
+        <div class="twelve column">
+            <h3 class="black">{{blog.title}}</h3>
+            <b>{{blog.date}}</b>
+            <p v-html="blog.content"></p>
+            <hr>
+        </div>
+    </section>
 </template>
 
 <script>

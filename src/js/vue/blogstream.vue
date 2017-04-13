@@ -1,13 +1,23 @@
-<style lang="less">
+<style lang="less" scoped>
+    .blog-router {
+        text-align: center;
+        margin: 2rem 0 2rem 0;
 
+        & > a:not(:first-child) {
+            margin-right: 0.4rem;
+        }
+    }
 </style>
 
 <template>
     <div>
-        <router-link v-once v-for="blogYear in blogYears" :to="'/blog/' + blogYear">{{blogYear}}</router-link>
-        <router-link to="/blog/all">All</router-link>
-        <blog v-for="blogid in getBlogIdList" :blog-id="blogid"></blog>
-        <div>{{blogIdList}}</div>
+        <div class="blog-router">
+            <router-link to="/blog/all">All</router-link>
+            <router-link v-once v-for="blogYear in blogYears" :to="'/blog/' + blogYear">{{blogYear}}</router-link>
+        </div>
+        <div class="blog-stream container">
+            <blog v-for="blogid in getBlogIdList" :blog-id="blogid"></blog>
+        </div>
     </div>
 </template>
 
@@ -23,13 +33,13 @@
           };
         },
         computed: {
-            getBlogIdList: function () {
+            getBlogIdList: function () { // if the year passed in the url is not a year > 2015 it returns all years other wise it returns the specific blogs from that year
                 return parseInt(this.blogYear) > 2015 ? this.blogIdListForYear() : [...Array(blogData.blog.length).keys()];
             },
         },
         methods: {
             blogIdListForYear: function () {
-                var blogIdList =[];
+                var blogIdList = [];
                 blogData.blog.forEach((blog, index) => {
                     if (this.blogYear === blog.date.substring(0,4))
                         blogIdList.push(index);
