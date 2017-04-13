@@ -1,6 +1,6 @@
 <style lang="less" scoped>
     #monitor {
-        margin: 0 auto 100px auto;
+        margin: 0 auto 80px auto;
         position: relative;
         border-radius: 25px;
         width:200px;

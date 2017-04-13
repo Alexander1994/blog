@@ -6,6 +6,9 @@
         & > a:not(:first-child) {
             margin-right: 0.4rem;
         }
+        & > a {
+            color: #aaa;
+        }
     }
 </style>
 
@@ -33,12 +36,12 @@
           };
         },
         computed: {
-            getBlogIdList: function () { // if the year passed in the url is not a year > 2015 it returns all years other wise it returns the specific blogs from that year
+            getBlogIdList: function () { // if the year passed in the url is not a year > 2015 it returns all years other wise it returns the specific blog from that year
                 return parseInt(this.blogYear) > 2015 ? this.blogIdListForYear() : [...Array(blogData.blog.length).keys()];
             },
         },
         methods: {
-            blogIdListForYear: function () {
+            blogIdListForYear: function () { // get list of blogs for the year in the url
                 var blogIdList = [];
                 blogData.blog.forEach((blog, index) => {
                     if (this.blogYear === blog.date.substring(0,4))

@@ -2,8 +2,8 @@
     #main {
         height: ~"calc(100vh - 48px)";
         display: flex;
-        align-items: center;
         justify-content: center;
+        margin-top: 14vh;
     }
 </style>
 
