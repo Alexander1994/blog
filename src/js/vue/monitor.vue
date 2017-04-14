@@ -1,9 +1,9 @@
 <style lang="less" scoped>
     #monitor {
-        margin: 0 auto 80px auto;
+        margin: 0 auto 40px auto;
         position: relative;
         border-radius: 25px;
-        width:200px;
+        width: 200px;
         height: 130px;
         background: black;
         border: 5px grey solid;

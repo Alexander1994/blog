@@ -1,11 +1,12 @@
 <style lang="less">
     header {
+        border-bottom: 1px solid grey;
+
         & h1 {
-            margin: 0;
+            margin: 0 0 0 1.5rem;
             font-size: 48px;
             letter-spacing: 1px;
             display: inline-block;
-            border-bottom: 1px solid grey;
         }
         & h1:hover {
             color: #888;
