@@ -2,29 +2,31 @@
 This is a basic blog I'm building as apart of learning about single file components and Vue.
 
 ## To replicate
-This project wasn't really designed for others to tinker with but if you would like...
+*Tested only in Ubuntu*
+
+run the following cmds inside the blog folder
+
 ```
-cd blog
-mkdir dist
-mkdir dist/js
-cp src/index.html dist/index.html
-mkdir src/media
+npm install
+./lib/build.sh
 ```
-Create a json file in src/media the following format:
+
+## For Watches
+*Ubuntu required for inotifywait*
+
+[inotifywait](https://linux.die.net/man/1/inotifywait) is required for watches.
+install [inotifywait](https://linux.die.net/man/1/inotifywait) with cmd:
+
 ```
-{
-    blog: [
-        {
-            title: "...",
-            date: "UTC format",
-            "content": "<p>main content</p>"
-        }
-    ]
-}
+apt-get install inotify-tools
 ```
+
+run watches with cmd:
+
 ```
-cd lib
-./buildvue.sh
-./watchhtml.sh
+./lib/build.sh -w all
 ```
-Then make some changes
+
+The word `all` can be replaced by `html` or `js` for the individual watchers
+
+To build a single time and not watch, run the command without the -w option
