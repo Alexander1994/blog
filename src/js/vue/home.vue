@@ -3,9 +3,11 @@
         height: ~"calc(100vh - 48px)";
         display: flex;
         justify-content: center;
+    }
+    .content {
         margin-top: 14vh;
     }
-    .content > h2 {
+    .content > h3 {
         text-align: center;
     }
     .button-container {

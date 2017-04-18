@@ -1,24 +1,29 @@
 <style lang="less">
+    @import "../../less/colors";
+
     header {
-        border-bottom: 1px solid grey;
+        border-bottom: 1px solid @black;
+        margin: 0.5em 0.5em 0 0.5em;
 
         & h1 {
             margin: 0 0 0 1.5rem;
             font-size: 48px;
             letter-spacing: 1px;
             display: inline-block;
+            color: @black;
         }
         & h1:hover {
-            color: #888;
+            color: @grey;
         }
         & > a {
             text-decoration: none;
-            color: #000;
         }
     }
 
     // cross app styles
-
+    body {
+        margin: 0;
+    }
     #app {
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;

@@ -1,7 +1,5 @@
 <style lang="less" scoped>
-    @black: #222;
-    @white: #ddd;
-
+    @import "../../less/colors";
 
     // arrow
     .arrow {
@@ -18,14 +16,13 @@
                 transition: opacity 1s ease-in;
 
         &-link {
-            @arrow-width: sqrt(3em * 2)/2;
+            @arrow-width: 3.1em;
             z-index: 0;
             margin-top: 1em;
-            left: calc(~"50% - " @arrow-width);
+            left: calc(~"50% - " @arrow-width/2);
+            width: @arrow-width;
             position: absolute;
             display: block;
-            height: 3em;
-            width: 3em;
         }
     }
 
@@ -74,7 +71,7 @@
         }
     }
 
-    // decal
+    // decals
     .decal-container {
         position: relative;
         & > p {
