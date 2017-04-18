@@ -2,6 +2,41 @@
     @black: #222;
     @white: #ddd;
 
+
+    // arrow
+    .arrow {
+        @size: 3em;
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+        border-left: 2px solid @white;
+        border-top: 2px solid @white;
+        border-radius: 10%;
+        width: @size;
+        height: @size;
+        opacity: 0;
+        -webkit-transition: opacity 1s ease-in;
+                transition: opacity 1s ease-in;
+
+        &-link {
+            @arrow-width: sqrt(3em * 2)/2;
+            z-index: 0;
+            margin-top: 1em;
+            left: calc(~"50% - " @arrow-width);
+            position: absolute;
+            display: block;
+            height: 3em;
+            width: 3em;
+        }
+    }
+
+    .fadein {
+        opacity: 1;
+    }
+    .linkvisible {
+        z-index: 4;
+    }
+
+    // general about styles
     #about {
         height: 100vh;
         background: @black;
@@ -11,12 +46,12 @@
     .section {
         text-align: center;
         height: 50vh;
+        &:first-child > .columns {
+            margin-top: 3em;
+        }
     }
 
-    .container {
-        padding-top: 3rem;
-    }
-
+    // ring
     @diameter: 3em;
     .ring {
         border: 2px solid @white;
@@ -39,10 +74,36 @@
         }
     }
 
+    // decal
+    .decal-container {
+        position: relative;
+        & > p {
+            margin: 2em;
+        }
+    }
+
+    .left-decal, .right-decal {
+        position: absolute;
+        width: 3em;
+        height: 3em;
+    }
+    .left-decal {
+        border-top: 2px solid @white;
+        border-left: 2px solid @white;
+    }
+    .right-decal {
+        border-right: 2px solid @white;
+        border-bottom: 2px solid @white;
+        right: 0;
+        bottom: 0;
+    }
 </style>
 
 <template>
     <section id="about">
+        <a href="#" class="arrow-link" v-scroll-to="'#app'" v-bind:class="{ linkvisible: arrowDisplayed }">
+            <div class="arrow" v-bind:class="{ fadein: arrowDisplayed }"></div>
+        </a>
         <div class="container">
             <div class="row section">
                 <div class="five columns">
@@ -53,8 +114,12 @@
                 </div>
             </div>
             <div class="row section">
-                <div class="twelve columns">
-                    Lorem ipsum dolor sit amet, sit vidisse accusamus in, te vix purto dicunt. Id option virtute reprehendunt usu, ut pro habemus alienum. Te nec munere soleat, ei quis indoctum reprimique pri. Ne sed percipit petentium delicatissimi, no mel sumo perpetua, ex mundi noster scaevola per.
+                <div class="twelve columns decal-container">
+                    <div class="left-decal"></div>
+                    <p>
+                        Lorem ipsum dolor sit amet, sit vidisse accusamus in, te vix purto dicunt. Id option virtute reprehendunt usu, ut pro habemus alienum. Te nec munere soleat, ei quis indoctum reprimique pri. Ne sed percipit petentium delicatissimi, no mel sumo perpetua, ex mundi noster scaevola per.
+                    </p>
+                    <div class="right-decal"></div>
                 </div>
             </div>
         </div>
@@ -85,12 +150,10 @@
                     if (this.arrowTimerStarted) {
                         clearTimeout(this.arrowTimeout);
                         this.arrowTimerStarted = false;
-                        console.log("arrow display prevented");
                     }
                 }
             },
             displayArrow: function () {
-                console.log("Arrow Displayed");
                 this.arrowDisplayed = true;
                 this.arrowTimerStarted = false;
             }
