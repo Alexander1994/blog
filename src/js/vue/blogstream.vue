@@ -1,4 +1,6 @@
 <style lang="less" scoped>
+    @import "../../less/colors";
+
     .blog-router {
         text-align: center;
         margin: 2rem 0 2rem 0;
@@ -7,7 +9,7 @@
             margin-right: 0.4rem;
         }
         & > a {
-            color: #aaa;
+            color: @grey;
         }
     }
 </style>
