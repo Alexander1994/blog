@@ -10,13 +10,6 @@
             font-size: 48px;
             letter-spacing: 1px;
             display: inline-block;
-            color: @black;
-        }
-        & h1:hover {
-            color: @grey;
-        }
-        & > a {
-            text-decoration: none;
         }
     }
 
@@ -32,13 +25,20 @@
     h1, h2, h3 {
         font-family: 'Old Standard TT', serif;
     }
+    a.black {
+        color: @black;
+        text-decoration: none;
+    }
+    a.black:hover {
+        color: @grey;
+    }
 
 </style>
 
 <template>
     <div id="app">
         <header>
-            <router-link to="/">
+            <router-link to="/" class="black">
                 <h1>Alex McCallum</h1>
             </router-link>
         </header>
