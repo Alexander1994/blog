@@ -44,11 +44,18 @@
         text-align: center;
         height: 50vh;
         &:first-child > .columns {
+            margin-top: 5em;
+        }
+    }
+
+    @media (max-width: 550px) {
+        .section:first-child > .columns {
             margin-top: 3em;
         }
     }
 
     // ring
+    @github-img-size: 120px;
     @diameter: 3em;
     .ring {
         border: 2px solid @white;
@@ -58,7 +65,10 @@
         width: @diameter;
         margin: 0 auto;
         line-height: @diameter;
-        vertical-align: middle;
+
+        & img {
+            margin-top: calc(@diameter/2 ~" - " @github-img-size/2);
+        }
     }
 
     @media (max-width: 768px) {
@@ -68,7 +78,20 @@
             height: @query-diameter;
             width: @query-diameter;
             line-height: @query-diameter;
+
+            & img {
+                margin-top: calc(@query-diameter/2 ~" - " @github-img-size/2);
+            }
         }
+    }
+
+    a.white {
+        color: @white;
+        text-decoration: none;
+    }
+
+    a.white:hover {
+        color: @grey;
     }
 
     // decals
@@ -104,10 +127,16 @@
         <div class="container">
             <div class="row section">
                 <div class="five columns">
-                    <div class="resume ring">CV</div>
+                    <a class="white" href="media/resume.pdf" target="_blank">
+                        <div class="resume ring">CV</div>
+                    </a>
                 </div>
                 <div class="five columns u-pull-right">
-                    <div class="ring"></div>
+                    <div class="ring">
+                        <a href="https://github.com/Alexander1994">
+                            <img src="media/GitHub-Mark-Light-120px-plus.png" alt="Github">
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="row section">
