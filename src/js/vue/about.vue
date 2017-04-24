@@ -4,16 +4,18 @@
     // arrow
     .arrow {
         @size: 3em;
-        -webkit-transform: rotate(45deg);
-                transform: rotate(45deg);
         border-left: 2px solid @white;
         border-top: 2px solid @white;
         border-radius: 10%;
         width: @size;
         height: @size;
         opacity: 0;
-        -webkit-transition: opacity 1s ease-in;
-                transition: opacity 1s ease-in;
+        .vendor(transform, rotate(45deg));
+        .vendor(transition, opacity 1s ease-in);
+
+        &:hover {
+            border-color: @grey;
+        }
 
         &-link {
             @arrow-width: 3.1em;
@@ -68,6 +70,10 @@
 
         & img {
             margin-top: calc(@diameter/2 ~" - " @github-img-size/2);
+            opacity: 0.85;
+        }
+        & img:hover {
+            opacity: 0.463;
         }
     }
 
@@ -117,6 +123,11 @@
         right: 0;
         bottom: 0;
     }
+
+    .vendor(@property, @value) { // webkit for mobile
+        -webkit-@{property}: @value;
+                @{property}: @value;
+    }
 </style>
 
 <template>
@@ -143,7 +154,10 @@
                 <div class="twelve columns decal-container">
                     <div class="left-decal"></div>
                     <p>
-                        Lorem ipsum dolor sit amet, sit vidisse accusamus in, te vix purto dicunt. Id option virtute reprehendunt usu, ut pro habemus alienum. Te nec munere soleat, ei quis indoctum reprimique pri. Ne sed percipit petentium delicatissimi, no mel sumo perpetua, ex mundi noster scaevola per.
+                        My name is Alex McCallum, I am software developer from Halifax NS.
+                        I am currently a 4<sup>th</sup> year student at Dalhousie University majoring in Computer science and minoring in Mathematics.
+                        My passion is for all things web related from the database to the view.
+                        More in depth info about me can be found in the links above.
                     </p>
                     <div class="right-decal"></div>
                 </div>
