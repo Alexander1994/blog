@@ -121,8 +121,8 @@
 
 <template>
     <section id="about">
-        <a href="#" class="arrow-link" v-scroll-to="'#app'" v-bind:class="{ linkvisible: arrowDisplayed }">
-            <div class="arrow" v-bind:class="{ fadein: arrowDisplayed }"></div>
+        <a href="#" class="arrow-link" v-scroll-to="'#app'" :class="{ linkvisible: arrowDisplayed }">
+            <div class="arrow" :class="{ fadein: arrowDisplayed }"></div>
         </a>
         <div class="container">
             <div class="row section">

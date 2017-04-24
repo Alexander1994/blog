@@ -16,7 +16,7 @@
 </style>
 
 <template>
-    <section v-bind:id="'id-'+blogId" class="row">
+    <section :id="'id-'+blogId" class="row">
         <div class="twelve column">
             <h3 class="black"><a v-scroll-to="'#id-'+blogId" href="#" class="black">{{blog.title}}</a></h3>
             <b>{{blog.date}}</b>
