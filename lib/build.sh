@@ -43,19 +43,20 @@ build_html () {
 }
 
 watch=false
-
+buildtype=$2
 if [[ "$1" == "-w" ]]
 then
     watch=true
+else
+    buildtype=$1
 fi
+echo "$buildtype"
 
-echo "$2"
-
-if [[ "$2" == "html" ]] ; then
+if [[ "$buildtype" == "html" ]] ; then
     build_html ${watch}
-elif [[ "$2" == "js" ]] ; then
+elif [[ "$buildtype" == "js" ]] ; then
     build_vue ${watch}
-elif [[ "$2" == "all" ]] ; then
+elif [[ "$buildtype" == "all" ]] ; then
     build_html ${watch} & build_vue ${watch}
 elif [[ $# -eq 0 ]] ; then
     build
