@@ -32,6 +32,11 @@
     a.black:hover {
         color: @grey;
     }
+    // For Blog json HTML
+    li {
+        margin-left: 1.2em;
+        list-style-position: outside;
+    }
 
 </style>
 

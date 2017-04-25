@@ -17,7 +17,7 @@
 
 <template>
     <section :id="'id-'+blogId" class="row">
-        <div class="twelve column">
+        <div class="ten columns">
             <h3 class="black"><a v-scroll-to="'#id-'+blogId" href="#" class="black">{{blog.title}}</a></h3>
             <b>{{blog.date}}</b>
             <p v-html="blog.content"></p>
