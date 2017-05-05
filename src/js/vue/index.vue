@@ -22,7 +22,7 @@
         -moz-osx-font-smoothing: grayscale;
     }
 
-    h1, h2, h3 {
+    h1, h2, h3, h4, h5 {
         font-family: 'Old Standard TT', serif;
     }
     a.black {
@@ -48,11 +48,14 @@
             </router-link>
         </header>
         <router-view></router-view>
+        <footer-section></footer-section>
     </div>
 </template>
 
 <script>
+    const footerSection = require('./footer.vue');
     module.exports = {
-        name: 'app'
+        name: 'app',
+        components: {footerSection}
     };
 </script>
