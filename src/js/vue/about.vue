@@ -107,7 +107,11 @@
             margin: 2em;
         }
     }
-
+    @media (max-width: 768px) {
+        .decal-container > p {
+            margin: 1em;
+        }
+    }
     .left-decal, .right-decal {
         position: absolute;
         width: 3em;
@@ -155,7 +159,7 @@
                     <div class="left-decal"></div>
                     <p>
                         My name is Alex McCallum, I am software developer from Halifax NS.
-                        I am currently a 4<sup>th</sup> year student at Dalhousie University majoring in Computer science and minoring in Mathematics.
+                        I am currently a 4<sup>th</sup> year student at Dalhousie University majoring in Computer science.
                         My passion is for all things web related from the database to the view.
                         More in depth info about me can be found in the links above.
                     </p>

@@ -25,7 +25,7 @@
         <section class="main">
             <div class="content">
                 <monitor></monitor>
-                <h3>A Minimalist Showcase of my Experience</h3>
+                <h3>A Minimalist Showcase of my Software Experience</h3>
                 <div class="button-container">
                     <button class="about-link" v-scroll-to="'#about'">About Me</button>
                     <router-link to="/blog/all" tag="button">Blog</router-link>
