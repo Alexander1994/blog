@@ -12,7 +12,7 @@ Vue.use(VueRouter);
 
 var routes = [
     {name: "home", path: '/', component: Home},
-    {name: "blog", path: '/blog/:blogYear', component: BlogStream, props:true}
+    {name: "blog", path: '/blog/:blogSearchParam', component: BlogStream, props:true}
 ];
 
 var router = new VueRouter({

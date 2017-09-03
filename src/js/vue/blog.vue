@@ -27,7 +27,7 @@
 </template>
 
 <script>
-    var blogData = require("../../media/blog.json");
+    const blogData = require("../../media/blog.json");
 
     module.exports = {
         props:['blogId'],

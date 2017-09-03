@@ -27,11 +27,11 @@
 </template>
 
 <script>
-    var blogData = require("../../media/blog.json");
-    var Blog = require("./blog.vue");
+    const blogData = require("../../media/blog.json");
+    const Blog = require("./blog.vue");
 
     module.exports = {
-        props:['blogYear'],
+        props:['blogSearchParam'],
         data: function () {
           return { // returns a unique set of all years in the blog
               blogYears: [...new Set(blogData.blog.map((blog) => blog.date.substring(0,4)))]
@@ -39,18 +39,36 @@
         },
         computed: {
             getBlogIdList: function () { // if the year passed in the url is not a year > 2015 it returns all years other wise it returns the specific blog from that year
-                return parseInt(this.blogYear) > 2015 ? this.blogIdListForYear() : [...Array(blogData.blog.length).keys()];
+                if (this.validYearSearch())
+                    return this.getBlogListByYear();
+                else if (this.validIdSearch())
+                    return this.getBlogListById();
+                else
+                    return this.getAllBlogs();
             },
         },
         methods: {
-            blogIdListForYear: function () { // get list of blogs for the year in the url
-                var blogIdList = [];
+            getBlogListByYear: function () { // get list of blogs for the year in the url
+                const blogIdList = [];
                 blogData.blog.forEach((blog, index) => {
-                    if (this.blogYear === blog.date.substring(0,4))
+                    if (this.blogSearchParam === blog.date.substring(0,4))
                         blogIdList.push(index);
                 });
                 return blogIdList;
+            },
+            getBlogListById: function () { // gets a list of blogs for an id
+                return [parseInt(this.blogSearchParam)];
+            },
+            getAllBlogs: function () { // get all blogs
+                return [...Array(blogData.blog.length).keys()];
+            },
+            validIdSearch: function () { // check if its a valid search for an Id
+                return parseInt(this.blogSearchParam) >= 0 && parseInt(this.blogSearchParam) < blogData.blog.length;
+            },
+            validYearSearch: function () { // check if it's valid search for all blogs in a year
+                return parseInt(this.blogSearchParam) > 2015;
             }
+
         },
         components: {Blog}
     };
