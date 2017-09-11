@@ -4,7 +4,7 @@
     h3 {
         margin: 0;
     }
-    p {
+    .content {
         margin: 2em 0 0 0;
     }
     section {
@@ -16,14 +16,15 @@
 </style>
 
 <template>
-    <section :id="'id-'+blogId" class="row">
+    <article :id="'id-'+blogId" class="row">
         <div class="ten columns">
             <h3 class="black"><a v-scroll-to="'#id-'+blogId" href="#" class="black">{{blog.title}}</a></h3>
             <b>{{blog.date}}</b>
-            <p v-html="blog.content"></p>
+            <p v-html="blog.info"></p>
+            <p class="content" v-html="blog.content"></p>
             <hr>
         </div>
-    </section>
+    </article>
 </template>
 
 <script>

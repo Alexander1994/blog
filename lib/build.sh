@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 build(){
-    unformatedJson='{"blog":[{"date":"2016-04-20","title":"Title","content":"Content"}]}'
+    unformatedJson='{"blog":[{"date":"2016-04-20","info":"Info","title":"Title","content":"Content"}]}'
     echo `mkdir dist; mkdir dist/js; mkdir src/media`
     echo "$unformatedJson" > src/media/blog.json
     build_vue & build_html
