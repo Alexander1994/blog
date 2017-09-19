@@ -1,7 +1,7 @@
 # Blog & Portfolio
 This is a basic blog and portfolio site I'm building as apart of learning about single file components and Vue.
 
-url: [http://AlexMcCallum.me](http://AlexMcCallum.me)
+url: [AlexMcCallum.me](http://AlexMcCallum.me)
 
 
 ## To replicate
