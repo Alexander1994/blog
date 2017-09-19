@@ -1,5 +1,6 @@
 # Blog & Portfolio
 [http://AlexMcCallum.me](http://AlexMcCallum.me)
+
 This is a basic blog and portfolio site I'm building as apart of learning about single file components and Vue.
 
 ## To replicate
