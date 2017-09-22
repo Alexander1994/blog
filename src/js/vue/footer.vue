@@ -1,5 +1,5 @@
 <style lang="less" scoped>
-    @import "../../less/colors";
+    @import "../../less/vars";
     h5 {
         color: @black;
         margin: 2rem 0 0 0;
@@ -11,6 +11,14 @@
     hr {
         margin: 0;
         border-color: @black;
+    }
+    @media (@xSmallQuery) {
+        footer {
+            height: 2em;
+        }
+        h5 {
+            margin-top: 1rem;
+        }
     }
 </style>
 

@@ -1,5 +1,5 @@
 <style lang="less">
-    @import "../../less/colors";
+    @import "../../less/vars";
 
     header {
         border-bottom: 1px solid @black;

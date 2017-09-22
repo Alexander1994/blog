@@ -1,0 +1,12 @@
+@black: #222;
+@white: #ddd;
+@grey: #888;
+
+@smallQuery: ~"max-width: 768px";
+@xSmallQuery: ~"max-width: 550px";
+
+
+.vendor(@property, @value) { // webkit for mobile
+  -webkit-@{property}: @value;
+    @{property}: @value;
+}

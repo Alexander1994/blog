@@ -1,5 +1,5 @@
 <style lang="less" scoped>
-    @import "../../less/colors";
+    @import "../../less/vars";
 
     // arrow
     .arrow {
@@ -50,9 +50,12 @@
         }
     }
 
-    @media (max-width: 550px) {
-        .section:first-child > .columns {
+    @media (@xSmallQuery) {
+        .section:first-child > .columns:first-child {
             margin-top: 3em;
+        }
+        .section:first-child > .columns:nth-child(2) {
+            margin-top: 1em;
         }
     }
 
@@ -77,7 +80,7 @@
         }
     }
 
-    @media (max-width: 768px) {
+    @media (@smallQuery) {
         .ring {
             @query-diameter: @diameter * 0.8;
             font-size: 3.75em;
@@ -107,7 +110,7 @@
             margin: 2em;
         }
     }
-    @media (max-width: 768px) {
+    @media (@smallQuery) {
         .decal-container > p {
             margin: 1em;
         }
@@ -126,11 +129,6 @@
         border-bottom: 2px solid @white;
         right: 0;
         bottom: 0;
-    }
-
-    .vendor(@property, @value) { // webkit for mobile
-        -webkit-@{property}: @value;
-                @{property}: @value;
     }
 </style>
 

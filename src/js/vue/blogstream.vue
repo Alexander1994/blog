@@ -1,5 +1,5 @@
 <style lang="less" scoped>
-    @import "../../less/colors";
+    @import "../../less/vars";
 
     .blog-router {
         text-align: center;
