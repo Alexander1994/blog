@@ -115,6 +115,11 @@
             margin: 1em;
         }
     }
+    @media (@xSmallQuery) {
+        .decal-container {
+            margin-top: 1rem;
+        }
+    }
     .left-decal, .right-decal {
         position: absolute;
         width: 3em;

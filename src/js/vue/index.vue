@@ -11,6 +11,11 @@
             letter-spacing: 1px;
             display: inline-block;
         }
+        @media (@xSmallQuery) {
+            h1 {
+                margin: 0 0.5rem;
+            }
+        }
     }
 
     // cross app styles

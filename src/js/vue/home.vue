@@ -1,4 +1,6 @@
 <style lang="less" scoped>
+    @import "../../less/vars";
+
     .main {
         height: ~"calc(100vh - 48px)";
         display: flex;
@@ -9,6 +11,11 @@
     }
     .content > h3 {
         text-align: center;
+    }
+    @media (@xSmallQuery) {
+        .content {
+            margin-top: 10vh;
+        }
     }
     .button-container {
         display: flex;
