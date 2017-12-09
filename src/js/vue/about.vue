@@ -44,23 +44,14 @@
 
     .section {
         text-align: center;
-        height: 45vh;
+        height: auto;
         &:first-child > .columns {
             margin-top: 3em;
         }
     }
 
-    @media (@xSmallQuery) {
-        .section:first-child > .columns:first-child {
-            margin-top: 3em;
-        }
-        .section:first-child > .columns:nth-child(2) {
-            margin-top: 1em;
-        }
-    }
-
     // ring
-    @github-img-size: 120px;
+    @img-size: 120px;
     @diameter: 3em;
     .ring {
         border: 2px solid @white;
@@ -72,7 +63,7 @@
         line-height: @diameter;
 
         & img {
-            margin-top: calc(@diameter/2 ~" - " @github-img-size/2);
+            margin-top: calc(@diameter/2 ~" - " @img-size/2);
             opacity: 0.85;
         }
         & img:hover {
@@ -80,7 +71,7 @@
         }
     }
 
-    @media (@smallQuery) {
+    @media (@mediumQuery) {
         .ring {
             @query-diameter: @diameter * 0.8;
             font-size: 3.75em;
@@ -89,8 +80,33 @@
             line-height: @query-diameter;
 
             & img {
-                margin-top: calc(@query-diameter/2 ~" - " @github-img-size/2);
+                margin-top: calc(@query-diameter/2 ~" - " @img-size/2);
             }
+        }
+    }
+
+    @media (@xSmallQuery) {
+        .ring {
+            @query-diameter: @diameter * 0.65;
+            font-size: 2.5em;
+            height: @query-diameter;
+            width: @query-diameter;
+            line-height: @query-diameter;
+
+            & img {
+                margin-top: calc(@query-diameter/2 ~" - " @img-size/4);
+                height: @img-size * 0.5;
+                width: @img-size * 0.5;
+            }
+        }
+        .link-section > .columns {
+            width: 33%;
+        }
+        .container {
+            padding: 0 10px;
+        }
+        .about-me-info > p:last-child {
+            display: none;
         }
     }
 
@@ -102,7 +118,13 @@
     a.white:hover {
         color: @grey;
     }
-    // test
+
+    .linkedin {
+        width: @img-size;
+        height: @img-size;
+    }
+
+    // about me text
     .about-me-info > p {
         margin-bottom: 0.5rem;
 
@@ -151,13 +173,20 @@
             <div class="arrow" :class="{ fadein: arrowDisplayed }"></div>
         </a>
         <div class="container">
-            <div class="row section">
-                <div class="five columns">
+            <div class="row section link-section">
+                <div class="four columns">
                     <a class="white" href="media/resume.pdf" target="_blank">
                         <div class="resume ring">CV</div>
                     </a>
                 </div>
-                <div class="five columns u-pull-right">
+                <div class="four columns u-pull-right">
+                    <div class="ring">
+                        <a href="https://www.linkedin.com/in/alex-mccallum-341949149/">
+                            <img class="linkedin" src="media/linkedin.png" alt="LinkedIn">
+                        </a>
+                    </div>
+                </div>
+                <div class="four columns u-pull-right">
                     <div class="ring">
                         <a href="https://github.com/Alexander1994">
                             <img src="media/GitHub-Mark-Light-120px-plus.png" alt="Github">
