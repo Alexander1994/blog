@@ -44,9 +44,9 @@
 
     .section {
         text-align: center;
-        height: 50vh;
+        height: 45vh;
         &:first-child > .columns {
-            margin-top: 5em;
+            margin-top: 3em;
         }
     }
 
@@ -102,16 +102,24 @@
     a.white:hover {
         color: @grey;
     }
+    // test
+    .about-me-info > p {
+        margin-bottom: 0.5rem;
+
+        &:last-child {
+            margin-bottom: 0rem;
+        }
+    }
 
     // decals
     .decal-container {
         position: relative;
-        & > p {
+        & > .about-me-info {
             margin: 2em;
         }
     }
     @media (@smallQuery) {
-        .decal-container > p {
+        .decal-container > .about-me-info {
             margin: 1em;
         }
     }
@@ -160,12 +168,23 @@
             <div class="row section">
                 <div class="twelve columns decal-container">
                     <div class="left-decal"></div>
-                    <p>
-                        My name is Alex McCallum, I am software developer from Halifax NS.
-                        I am currently a 4<sup>th</sup> year student at Dalhousie University majoring in Computer science.
-                        My passion is for all things web related from the database to the view.
-                        More in depth info about me can be found in the links above.
-                    </p>
+                        <div class="about-me-info">
+                            <p>
+                                My name is Alex McCallum, I am software developer from Halifax NS.
+                                I am currently a 4<sup>th</sup> year student at Dalhousie University majoring in Computer science.
+                                I am a passionate software developer curious about all aspects of computer science.
+                           </p>
+                            <p>
+                                Throughout my time at Dalhousie I have been an active member of the community as a Leader on Dal's IVCF society for 2 years, where we worked to develop a community on campus.
+                                I currently hold a position on Dal's Super Smash Brothers Society, a video game society where players gather to play the game competitively.
+                                I am a regular at the many game jams and hackathons the Dal CS society puts on for students.
+                                Beyond School and work, I enjoy the gym, yoga, playing guitar and reading.
+                           </p>
+                            <p>
+                                More in depth info about my career me can be found in the links above.
+                            </p>
+                        </div>
+
                     <div class="right-decal"></div>
                 </div>
             </div>
