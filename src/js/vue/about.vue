@@ -137,6 +137,8 @@
     // decals
     .decal-container {
         position: relative;
+        margin-top: 1.5em;
+
         & > .about-me-info {
             margin: 2em;
         }
@@ -205,11 +207,12 @@
                                 I am a passionate software developer curious about all aspects of computer science.
                            </p>
                             <p>
-                                Throughout my time at Dalhousie I have been an active member of the community as a Leader on Dal's IVCF society for 2 years, where we worked to develop a community on campus.
-                                I currently hold a position on Dal's Super Smash Brothers Society, a video game society where players gather to play the game competitively.
+                                At Dalhousie I partake in a wide variety of events put on by Dalhousie societies
                                 I regular attend game jams and hackathons put on by the Dalhousie CS society.
+                                I currently hold a position on Dal's Super Smash Brothers Society, a video game society where players gather to play the game competitively.
+                                I enjoy improv acting through Dalhousie's improv society.
                                 Beyond School and work, I enjoy the gym, yoga, playing guitar and reading.
-                           </p>
+                            </p>
                             <p>
                                 More in depth info about my career me can be found in the links above.
                             </p>
