@@ -1,6 +1,9 @@
 <style lang="less" scoped>
     @import "../../less/vars";
 
+    article {
+        margin-bottom: 2.5em;
+    }
     article > .columns {
         position: relative;
     }

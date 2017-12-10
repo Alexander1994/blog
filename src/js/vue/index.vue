@@ -3,7 +3,7 @@
 
     @border-size: 1px;
     @size: 2em;
-    @across-dist: sqrt(@size * @size + @size * @size);
+    @across-dist: sqrt(@size * @size * 2);
     @offset: 5em;
 
     .n-triangle(@n) {
@@ -19,7 +19,7 @@
     // arrow
     .triangle {
         position: absolute;
-        background: #FFF;//
+        background: #FFF;
         border-left: @border-size solid @black;
         border-top: @border-size solid @black;
         width: @size;
