@@ -45,8 +45,9 @@
     .section {
         text-align: center;
         height: auto;
+
         &:first-child > .columns {
-            margin-top: 3em;
+            margin-top: 3.5em;
         }
     }
 
@@ -206,7 +207,7 @@
                             <p>
                                 Throughout my time at Dalhousie I have been an active member of the community as a Leader on Dal's IVCF society for 2 years, where we worked to develop a community on campus.
                                 I currently hold a position on Dal's Super Smash Brothers Society, a video game society where players gather to play the game competitively.
-                                I am a regular at the many game jams and hackathons the Dal CS society puts on for students.
+                                I regular attend game jams and hackathons put on by the Dalhousie CS society.
                                 Beyond School and work, I enjoy the gym, yoga, playing guitar and reading.
                            </p>
                             <p>
