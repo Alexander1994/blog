@@ -207,7 +207,7 @@
                                 I am a passionate software developer curious about all aspects of computer science.
                            </p>
                             <p>
-                                At Dalhousie I partake in a wide variety of events put on by Dalhousie societies
+                                At Dalhousie I partake in a wide variety of events put on by Dalhousie societies.
                                 I regular attend game jams and hackathons put on by the Dalhousie CS society.
                                 I currently hold a position on Dal's Super Smash Brothers Society, a video game society where players gather to play the game competitively.
                                 I enjoy improv acting through Dalhousie's improv society.
