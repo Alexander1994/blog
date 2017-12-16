@@ -33,13 +33,6 @@
         }
     }
 
-    @media (max-width: 650px) {
-        .triangle {
-            display: none;
-        }
-    }
-
-
     header {
         border-bottom: @border-size solid @black;
         margin: 0.5em 0.5em 0 0.5em;
@@ -61,6 +54,10 @@
     body {
         margin: 0;
     }
+    p {
+        font-size: 1.1em;
+        line-height: 1.75em;
+    }
     #app {
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
@@ -76,6 +73,16 @@
     a.black:hover {
         color: @grey;
     }
+
+    @media (max-width: 700px) {
+        .triangle {
+            display: none;
+        }
+        p {
+            font-size: 1em;
+        }
+    }
+
     // For Blog json HTML
     li {
         margin-left: 1.2em;

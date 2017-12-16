@@ -45,7 +45,7 @@
         <div class="ten columns">
             <h3 class="black"><a v-scroll-to="'#id-'+blogId" href="#" class="black">{{blog.title}}</a></h3>
             <b>{{blog.date}}</b>
-            <p v-html="blog.info"></p>
+            <div v-html="blog.info"></div>
             <p class="content" v-html="blog.content"></p>
             <div class="hr-decal left"></div>
             <div class="hr-decal right"></div>
