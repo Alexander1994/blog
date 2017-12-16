@@ -140,7 +140,7 @@
         margin-top: 1.5em;
 
         & > .about-me-info {
-            margin: 2em;
+            margin: 1.5em;
         }
     }
     @media (@smallQuery) {
