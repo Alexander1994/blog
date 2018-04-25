@@ -202,14 +202,14 @@
                     <div class="left-decal"></div>
                         <div class="about-me-info">
                             <p>
-                                My name is Alex McCallum, I am software developer from Halifax NS.
-                                I am currently a 4<sup>th</sup> year student at Dalhousie University majoring in Computer science.
+                                My name is Alex McCallum, I am software developer from Halifax, Nova Scotia.
+                                I recently graduated from Dalhousie University with a bachelors degree in science with a major in computer science.
                                 I am a passionate software developer curious about all aspects of computer science.
                            </p>
                             <p>
-                                At Dalhousie I partake in a wide variety of events put on by Dalhousie societies.
-                                I regular attend game jams and hackathons put on by the Dalhousie CS society.
-                                I currently hold a position on Dal's Super Smash Brothers Society, a video game society where players gather to play the game competitively.
+                                At Dalhousie I enjoyed a wide variety of events put on by Dalhousie societies.
+                                I regularly attended game jams and hackathons put on by the Dalhousie CS society.
+                                I held a position on Dal's Super Smash Brothers Society, a video game society where players gather to play the game competitively.
                                 I enjoy improv acting through Dalhousie's improv society.
                                 Beyond School and work, I enjoy the gym, yoga, playing guitar and reading.
                             </p>
