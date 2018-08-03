@@ -128,6 +128,7 @@
     // about me text
     .about-me-info > p {
         margin-bottom: 0.5rem;
+        line-height:1.4em;
 
         &:last-child {
             margin-bottom: 0rem;
@@ -143,12 +144,12 @@
             margin: 1.5em;
         }
     }
-    @media (@smallQuery) {
+    @media (max-height: 570px) {
         .decal-container > .about-me-info {
             margin: 1em;
         }
     }
-    @media (@xSmallQuery) {
+    @media (max-height: 570px) {
         .decal-container {
             margin-top: 1rem;
         }
