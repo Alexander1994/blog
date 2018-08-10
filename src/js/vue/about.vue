@@ -1,45 +1,16 @@
 <style lang="less" scoped>
     @import "../../less/vars";
 
-    // arrow
-    .arrow {
-        @size: 3em;
-        border-left: 2px solid @white;
-        border-top: 2px solid @white;
-        border-radius: 10%;
-        width: @size;
-        height: @size;
-        opacity: 0;
-        .vendor(transform, rotate(45deg));
-        .vendor(transition, opacity 1s ease-in);
-
-        &:hover {
-            border-color: @grey;
-        }
-
-        &-link {
-            @arrow-width: 3.1em;
-            z-index: 0;
-            margin-top: 1em;
-            left: calc(~"50% - " @arrow-width/2);
-            width: @arrow-width;
-            position: absolute;
-            display: block;
-        }
-    }
-
-    .fadein {
-        opacity: 1;
-    }
-    .linkvisible {
-        z-index: 4;
-    }
-
     // general about styles
     #about {
         height: 100vh;
         background: @black;
         color: @white;
+    }
+    @media (@xxSmallQuery) {
+        #about {
+            height: 100%;
+        }
     }
 
     .section {
@@ -173,9 +144,7 @@
 
 <template>
     <section id="about">
-        <a href="#" class="arrow-link" v-scroll-to="'#app'" :class="{ linkvisible: arrowDisplayed }">
-            <div class="arrow" :class="{ fadein: arrowDisplayed }"></div>
-        </a>
+        <arrow down="false" black="false" scroll-to="app"></arrow>
         <div class="container">
             <div class="row section link-section">
                 <div class="four columns">
@@ -223,46 +192,15 @@
                 </div>
             </div>
         </div>
+        <arrow down="true" black="false" scroll-to="projects"></arrow>
     </section>
 </template>
 
 <script>
+    const Arrow = require("./arrow.vue");
+
     module.exports = {
         name: 'about',
-        data: function () {
-            return {
-                scrolledToAbout: false,
-                arrowTimerStarted: false,
-                arrowDisplayed: false,
-                arrowTimeout: undefined
-            };
-        },
-        methods: { // TODO add Lodash debounce function
-            handleScroll: function () {
-                this.scrolledToAbout = window.scrollY > this.$el.offsetHeight / 2;
-
-                if (this.scrolledToAbout &&  !this.arrowTimerStarted && !this.arrowDisplayed) {
-                    this.arrowTimerStarted = true;
-                    this.arrowTimeout = setTimeout(this.displayArrow, 3000);
-                }
-                if (!this.scrolledToAbout) {
-                    this.arrowDisplayed = false;
-                    if (this.arrowTimerStarted) {
-                        clearTimeout(this.arrowTimeout);
-                        this.arrowTimerStarted = false;
-                    }
-                }
-            },
-            displayArrow: function () {
-                this.arrowDisplayed = true;
-                this.arrowTimerStarted = false;
-            }
-        },
-        created: function () {
-            window.addEventListener('scroll', this.handleScroll);
-        },
-        destroyed: function () {
-            window.removeEventListener('scroll', this.handleScroll);
-        }
+        components: {Arrow}
     };
 </script>
