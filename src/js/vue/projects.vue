@@ -19,11 +19,11 @@
     }
 
     // card styles
-    @cardWidth: 17.5em;
-    @cardHeight: @cardWidth * 1.4;
-    @cardPadding: 0.5em;
-
     .card {
+        @cardWidth: 17.5em;
+        @cardHeight: @cardWidth * 1.4;
+        @cardPadding: 0.5em;
+
         width: @cardWidth;
         height: @cardHeight;
         margin: 0.5em 0.5em 0;
@@ -41,6 +41,7 @@
         }
         & > p {
             font-size: 0.9em;
+            line-height:1.4em;
         }
         & > h5 {
             height: 1.125em;
@@ -78,7 +79,7 @@
                 <img src="media/mines_webassembly.png" alt="Minesweeper clone in Webassembly">
                 <h5>Mines in Webassembly</h5>
                 <p><a href="https://github.com/Alexander1994/minesweeper-web-assembly">Github</a> <a href="http://alexmccallum.me/minesweeper-web-assembly/">Website</a> <a href="http://alexmccallum.me/#/blog/2">Blog</a></p>
-                <p>Minesweeper web app written in C++ and compiled to Webassembly for the web</p>
+                <p>Minesweeper app written in C++ and compiled to WebAssembly for the web</p>
             </div>
             <div class="card">
                 <img src="media/ts_attractor.png" alt="Modeling Attractors in Typescsript">

@@ -14,7 +14,6 @@
     }
 
     .section {
-        text-align: center;
         height: auto;
 
         &:first-child > .columns {
@@ -33,6 +32,7 @@
         width: @diameter;
         margin: 0 auto;
         line-height: @diameter;
+        text-align: center;
 
         & img {
             margin-top: calc(@diameter/2 ~" - " @img-size/2);
@@ -103,6 +103,7 @@
 
         &:last-child {
             margin-bottom: 0rem;
+            text-align: center;
         }
     }
 
@@ -174,7 +175,7 @@
                             <p>
                                 My name is Alex McCallum, I am software developer from Halifax, Nova Scotia.
                                 I recently graduated from Dalhousie University with a bachelors degree in science with a major in computer science.
-                                I am a passionate software developer curious about all aspects of computer science.
+                                I am very passionate about software development and curious about all aspects of computer science.
                            </p>
                             <p>
                                 At Dalhousie I enjoyed a wide variety of events put on by Dalhousie societies.
